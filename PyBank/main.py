@@ -52,3 +52,15 @@ print(f"Total: ${totalprofit}")
 print(f"Average Change: ${averagechange}")
 print(f"Greatest Increase in Profits: {maxdate} ${maxprofit}")
 print(f"Greatest Decrease in Profits: {mindate} ${minprofit}")
+
+#Printing output to financialoutput.txt
+import sys
+
+with open(output_path, 'w') as f:
+    print("Financial Analysis", file=f)
+    print("-------------------------------------", file=f)
+    print(f"Total Months: {totalmonths}", file=f)
+    print(f"Total: ${totalprofit}", file=f)
+    print(f"Average Change: ${averagechange}", file=f)
+    print(f"Greatest Increase in Profits: {maxdate} ${maxprofit}", file=f)
+    print(f"Greatest Decrease in Profits: {mindate} ${minprofit}", file=f)

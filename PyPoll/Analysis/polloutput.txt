@@ -1,0 +1,24 @@
+Election Results
+-------------------------------------
+Total Votes: 1048575
+-------------------------------------
+Marsh Khan : 40.574% (425453)
+Marsh Correy : 12.844% (134680)
+Queen Khan : 12.494% (131006)
+Marsh Li : 8.99% (94271)
+Queen Correy : 3.943% (41348)
+Bamoo Correy : 1.959% (20546)
+Trandee Khan : 1.884% (19759)
+Raffah Khan : 1.884% (19758)
+Bamoo O'Tooley : 0.303% (3176)
+Bamoo Li : 1.369% (14358)
+Bamoo Khan : 6.257% (65607)
+Queen O'Tooley : 0.593% (6214)
+Queen Li : 2.776% (29110)
+Raffah Li : 0.412% (4317)
+Raffah Correy : 0.6% (6295)
+Marsh O'Tooley : 1.937% (20313)
+Trandee Correy : 0.589% (6177)
+Trandee Li : 0.41% (4304)
+Trandee O'Tooley : 0.09% (947)
+Raffah O'Tooley : 0.089% (936)

@@ -14,7 +14,7 @@ output_path = os.path.join('Analysis', "financialoutput.txt")
 #Opening budget data csv
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-#Skipping header row
+#Storing header row
     csv_header = next(csvreader)
 
 #Initializing variables

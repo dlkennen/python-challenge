@@ -46,9 +46,6 @@ with open(csvpath) as csvfile:
             votelist.append(totalvotes)
         totalvotes=0
 
-print(candidates) 
-print(votelist)   
- 
 #Determining the winner and combined vote total for the election.
 for votes in votelist:
     combinedvotetotal += votes
@@ -57,14 +54,10 @@ for votes in votelist:
         winnerindex = index
     index += 1
 
-print(combinedvotetotal)
-
 #Determining the percentage of votes for each candidate.
 for votes in votelist: 
     percent = round((100*float(votes)/float(combinedvotetotal)), 3)  
     percentlist.append(percent)
-
-print(percentlist)
 
 #Printing output to terminal
 print("")

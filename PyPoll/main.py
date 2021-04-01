@@ -6,7 +6,7 @@ import os
 import csv
 
 #Path for the input csv file
-csvpath = os.path.join('Resources', '03-Python_Homework_Instructions_PyPoll_Resources_election_data.csv')
+csvpath = os.path.join('Resources', 'election_data.csv')
 
 #Path for th output text file
 output_path = os.path.join('Analysis', "polloutput.txt")

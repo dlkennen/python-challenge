@@ -6,7 +6,7 @@ import os
 import csv
 
 #Path for the input csv file
-csvpath = os.path.join('Resources', '03-Python_Homework_Instructions_PyBank_Resources_budget_data.csv')
+csvpath = os.path.join('Resources', 'budget_data.csv')
 
 #Path for th output text file
 output_path = os.path.join('Analysis', "financialoutput.txt")

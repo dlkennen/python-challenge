@@ -87,3 +87,4 @@ with open(output_path, 'w') as f:
     for name in candidates:
         print(f"{name} : {percentlist[indexN]}% ({votelist[indexN]})", file=f)
         indexN += 1
+    print(f"Winner: {winner}", file=f)

@@ -28,7 +28,6 @@ with open(csvpath) as csvfile:
     profitlist = []
     indexP = 0
     change = 0
-    oldprofit = 0
 
 #Looping through each row in the spreadsheet
     for row in csvreader:
@@ -40,6 +39,9 @@ with open(csvpath) as csvfile:
 #Creating a list for dates and profits.
         datelist.append(row[0])
         profitlist.append(row[1])
+
+#Initializing oldprofit
+oldprofit = profitlist[0]
 
 #Deterimining the biggest positive and negative changes across the data set.
 for profit in profitlist:
@@ -54,7 +56,7 @@ for profit in profitlist:
     indexP += 1
  
  #Computing the average change over the data set. 
-    averagechange = round((totalprofit/totalmonths), 2)
+    averagechange = round(((int(profitlist[indexP-1])-int(profitlist[0]))/(totalmonths-1)), 2)
 
 #Printing output to terminal
 print("Financial Analysis")

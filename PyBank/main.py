@@ -14,7 +14,7 @@ output_path = os.path.join('Analysis', "financialoutput.txt")
 #Opening budget data csv
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
-#Storing header row
+#Skipping header row
     csv_header = next(csvreader)
 
 #Initializing variables
@@ -24,6 +24,11 @@ with open(csvpath) as csvfile:
     maxprofit = 0
     mindate = "Jan-2010"
     minprofit = 0
+    datelist = []
+    profitlist = []
+    indexP = 0
+    change = 0
+    oldprofit = 0
 
 #Looping through each row in the spreadsheet
     for row in csvreader:
@@ -32,14 +37,21 @@ with open(csvpath) as csvfile:
         totalmonths += 1
         totalprofit += int(row[1])
 
-#Replacing the stored minimum or maximum values.
-        if int(row[1]) > maxprofit:
-            maxprofit = int(row[1])
-            maxdate = row[0]
-        
-        if int(row[1]) < minprofit:
-            minprofit = int(row[1])
-            mindate = row[0]
+#Creating a list for dates and profits.
+        datelist.append(row[0])
+        profitlist.append(row[1])
+
+#Deterimining the biggest positive and negative changes across the data set.
+for profit in profitlist:
+    change = int(profit) - int(oldprofit)
+    if change > maxprofit:
+        maxprofit = change
+        maxdate = datelist[indexP]
+    if change < minprofit:
+        minprofit = change
+        mindate = datelist[indexP]
+    oldprofit = profit
+    indexP += 1
  
  #Computing the average change over the data set. 
     averagechange = round((totalprofit/totalmonths), 2)

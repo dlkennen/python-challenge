@@ -56,7 +56,7 @@ for votes in votelist:
 
 #Determining the percentage of votes for each candidate.
 for votes in votelist: 
-    percent = round((100*float(votes)/float(combinedvotetotal)), 3)  
+    percent = round((100*float(votes)/float(combinedvotetotal)), 4)  
     percentlist.append(percent)
 
 #Printing output to terminal

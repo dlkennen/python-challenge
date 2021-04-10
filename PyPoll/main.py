@@ -29,7 +29,7 @@ with open(csvpath) as csvfile:
 
 #Looping through each row in the spreadsheet to generate list of candidates
     for row in csvreader:
-        fullname = row[1] + " " + row [2]
+        fullname = row[2]
         if fullname not in candidates:
             candidates.append(fullname)
 
@@ -40,7 +40,7 @@ with open(csvpath) as csvfile:
             csvreader = csv.reader(csvfile, delimiter=',')
             next(csvreader)
             for row in csvreader:
-                fullname = row[1] + " " + row[2]
+                fullname = row[2]
                 if name == fullname:
                     totalvotes += 1
             votelist.append(totalvotes)
